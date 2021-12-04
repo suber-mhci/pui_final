@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             csvURL:
               "https://raw.githubusercontent.com/suber-mhci/tutorials/master/age_data.csv"
           }, 
-          lotOptions: {
+          plotOptions: {
             series: {
                 // ...
                 events: {

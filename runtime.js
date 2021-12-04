@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             csvURL:
               "https://raw.githubusercontent.com/suber-mhci/pui_final/master/runtime_data.csv"
           }, 
-          lotOptions: {
+          plotOptions: {
             series: {
                 // ...
                 events: {
