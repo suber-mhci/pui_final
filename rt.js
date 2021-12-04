@@ -5,6 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
             zoomType: 'xy',
             innerHeight: 500
         },
+        accessibility: {
+            point: {
+                valueDescriptionFormat: '{index}. {point.name}, {point.y}.'
+            }
+        },
         title: {
             text: "Rotten Tomatoes Score for Streaming Services"
         },
