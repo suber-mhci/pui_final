@@ -5,8 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
             zoomType: 'xy',
             innerHeight: 500
         },
+        accessibility: {
+            point: {
+                valueDescriptionFormat: '{index}. {point.name}, {point.y}.'
+            }
+        },
         title: {
-            text: "IMDB Score for Streaming"
+            text: "IMDb Score for Streaming Services"
         },
         credits: {
             enabled: false
@@ -14,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         colors: ['#F92525', '#25A9F9', '#C225F9', '#28F925'],
         yAxis: {
             title: {
-                text: "Budget"
+                text: "Score out of 10"
             }
         },
         tooltip: {
@@ -36,15 +41,40 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
         xAxis: {
-            categories: ['Apples', 'Bananas', 'Oranges']
-            ,title: {
-                text:"Production Year"
+            title: {
+                text:"Production Year (Click streaming services below to select/deselct)"
             }
         }, 
         data: {
             csvURL:
               "https://raw.githubusercontent.com/suber-mhci/tutorials/master/imdb_data.csv"
-          }
+        }, 
+        plotOptions: {
+            series: {
+                // ...
+                events: {
+                    click: function () {
+                        // Sonify the series when clicked
+                        this.sonify({
+                            instruments: [{
+                                instrument: 'triangleMajor',
+                                instrumentMapping: {
+                                    volume: 0.8,
+                                    duration: 200,
+                                    pan: 'x',
+                                    frequency: 'y'
+                                },
+                                // Start at C5 note, end at C6
+                                instrumentOptions: {
+                                    minFrequency: 520,
+                                    maxFrequency: 1050
+                                }
+                            }]
+                        });
+                    }
+                }
+            }
+        }
     });
 });
   

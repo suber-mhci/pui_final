@@ -18,20 +18,26 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet"/>
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/sonification.js"></script>
+
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
 
 
 </head>
 
-<nav class="navbar navbar-default">
+<nav id="nav" class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Streaming Service Visualization</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="index.html">IMDB</a></li>
+      <li class="active"><a href="index.html">IMDb</a></li>
       <li><a href="rt.html">Rotten Tomatoes</a></li>
       <li><a href="age.html">Age</a></li>
+      <li><a href="runtime.html">Runtime</a></li>
     </ul>
   </div>
 </nav>
@@ -41,17 +47,21 @@
         <div class="span12">
             <div class="row-fluid">
                 <div class="span12">
-                    <div class="well">2 - overview wheel
+                    <div class="well">
+                      <p class="instructions">
+                        <b>Explore stuff: </b>
+                      </p>
+                      <p class="instructions">
+                        - <b>Interact with the data visualization below: </b>Click the categories(ex. Netflix, Hulu) to <b>select/deselect viewable category</b>. Drag to <b>zoom</b> into area. 
                         <br>
-                        <br>
-                        <br>
-                        <br>
+                        - <b>Accessibility features: </b>(1) This website supports <b>screen readers (ChromeVox)</b>, (2) <b>hamburger icon provides <b>export options (i.e table, csv, etc.)</b> of visualization, (3) click the points for <b>sonification</b>.
+                      </p>
                     </div>
                 </div>
             </div>
             <div class="row-fluid">
                 <div class="span12">
-                    <div class="well">3 - movie list
+                    <div class="well">
                       <div id="container">
             
                       </div>

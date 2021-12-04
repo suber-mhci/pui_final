@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             innerHeight: 500
         },
         title: {
-            text: "Rotton Tomatoes Score (/100) for Streaming"
+            text: "Rotten Tomatoes Score for Streaming Services"
         },
         credits: {
             enabled: false
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         colors: ['#F92525', '#25A9F9', '#C225F9', '#28F925'],
         yAxis: {
             title: {
-                text: "Budget"
+                text: "Score out of 100"
             }
         },
         tooltip: {
@@ -36,9 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
         xAxis: {
-            categories: ['Apples', 'Bananas', 'Oranges']
-            ,title: {
-                text:"Production Year"
+            title: {
+                text:"Production Year (Click streaming services below to select/deselct)"
             }
         }, 
         data: {

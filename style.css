@@ -1,6 +1,7 @@
 #dashboard {
   margin-right: 20px;
   margin-left: 20px;
+  background-color: whitesmoke;
 }
 
 #services {
@@ -9,5 +10,24 @@
 }
 
 #container {
-  height: 500px;
+  height: 520px;
 }
+
+div.well {
+  background-color: white;
+  color: white;
+}
+
+#nav {
+  color: white;
+}
+
+li {
+  width: 250px;
+  text-align: center;
+}
+
+.instructions {
+  color: black;
+}
+

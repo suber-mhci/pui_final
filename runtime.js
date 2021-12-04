@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             innerHeight: 500
         },
         title: {
-            text: "Target Age Groups for Streaming"
+            text: "Runtime for Streaming Services"
         },
         credits: {
             enabled: false
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         colors: ['#F92525', '#25A9F9', '#C225F9', '#28F925'],
         yAxis: {
             title: {
-                text: "Budget"
+                text: "Minutes"
             }
         },
         tooltip: {
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 
         data: {
             csvURL:
-              "https://raw.githubusercontent.com/suber-mhci/tutorials/master/age_data.csv"
+              "https://raw.githubusercontent.com/suber-mhci/pui_final/master/runtime_data.csv"
           }
     });
 });
