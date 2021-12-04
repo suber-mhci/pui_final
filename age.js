@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         credits: {
             enabled: false
         },
-        colors: ['#F92525', '#25A9F9', '#C225F9', '#28F925'],
+        colors: ['#404040', '#25A9F9', '#C225F9', '#28F925'],
         yAxis: {
             title: {
                 text: "Budget"
