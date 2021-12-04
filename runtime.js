@@ -37,13 +37,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
         xAxis: {
             title: {
-                text:"Production Year (Click streaming services below to select/deselct)"
+                text:"Production Year (Click streaming services below to select/deselect)"
             }
         }, 
         data: {
             csvURL:
               "https://raw.githubusercontent.com/suber-mhci/pui_final/master/runtime_data.csv"
-          }
+          }, 
+          lotOptions: {
+            series: {
+                // ...
+                events: {
+                    click: function () {
+                        // Sonify the series when clicked
+                        this.sonify({
+                            instruments: [{
+                                instrument: 'triangleMajor',
+                                instrumentMapping: {
+                                    volume: 0.8,
+                                    duration: 200,
+                                    pan: 'x',
+                                    frequency: 'y'
+                                },
+                                // Start at C5 note, end at C6
+                                instrumentOptions: {
+                                    minFrequency: 520,
+                                    maxFrequency: 1050
+                                }
+                            }]
+                        });
+                    }
+                }
+            }
+        }
     });
 });
   

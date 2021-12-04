@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         xAxis: {
             title: {
-                text:"Production Year (Click streaming services below to select/deselct)"
+                text:"Production Year (Click streaming services below to select/deselect)"
             }
         }, 
         data: {
